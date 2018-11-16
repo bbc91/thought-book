@@ -1,4 +1,6 @@
-# thought-book
+# Thought-book
+
+## [Demo](http://thought-book.surge.sh/)
 
 ## Project setup
 ```
