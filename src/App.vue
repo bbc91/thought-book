@@ -1,16 +1,26 @@
 <template>
     <div id="app">
-        <div id="menu">
-            <ul>
-                <li>
-                    <router-link tag="button" to="/">Home</router-link>
-                    <router-link v-if="!user" tag="button" to="/register">Register</router-link>
-                    <button @click="logOut()" v-if="user">Logout</button>
-                </li>
-            </ul>
+        <div id="header" class="container">
+            <div class="logo">
+                <router-link to="/"><img src="./assets/logo.png"></router-link>
+            </div>
+            <div id="menu">
+                <b-nav pills>
+                    <b-nav-item :exact="true" to="/">Начало</b-nav-item>
+                    <b-nav-item :exact="true" to="/diary" v-if="user">Дневник</b-nav-item>
+                    <b-nav-item v-if="!user" :exact="true" to="/register">Регистрация</b-nav-item>
+                    <b-nav-item :exact="true" to="/questions">Въпроси</b-nav-item>
+                    <b-nav-item :exact="true" to="/contact">Контакти</b-nav-item>
+                    <b-nav-item :exact="true" v-if="user" @click="logOut()">Изход</b-nav-item>
+                </b-nav>
+            </div>
         </div>
-        <h2 v-if="user">Hey, {{user.email}}</h2>
-        <router-view/>
+        <div class="container" style="min-height: 500px;">
+            <router-view/>
+        </div>
+        <div class="container" id="footer">
+            Автор: <a href="http://petertrifonov.com/" target="_blank">Петър Петров - Психолог</a>
+        </div>
     </div>
 </template>
 
@@ -29,6 +39,7 @@
                 let self = this;
                 this.$store.dispatch('logOut').then(result => {
                     console.log('logout success');
+                    self.$router.push({path: '/'});
                 });
             }
         },
@@ -47,27 +58,5 @@
         width: 300px;
         margin: 0 auto;
         text-align: left;
-    }
-
-    #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-    }
-
-    #menu {
-        margin: 30px auto;
-        text-align: center;
-    }
-
-    #menu li {
-        display: inline-block;
-    }
-
-    #menu li button {
-        padding: 5px 10px;
-        margin: 5px;
     }
 </style>

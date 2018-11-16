@@ -1,17 +1,21 @@
 <template>
     <div class="home">
-        <div class="register-form" v-if="!user">
-            <h1>Login</h1>
-            <div class="form-field">
-                <label for="email">Email </label><br>
-                <input @keyup.enter="login()" id="email" type="email" v-model="email">
+        <h2 v-if="user">Hey, {{user.email}}</h2>
+        <div v-if="!user" class="card login-panel" style="width: 20rem;">
+            <div class="card-body">
+                <h5 class="card-title">Вход</h5>
+                <div class="form-group">
+                    <label for="email">И-мейл</label>
+                    <input type="email" class="form-control" id="email" @keyup.enter="login()" v-model="email"
+                           placeholder="Въведи и-мейл">
+                </div>
+                <div class="form-group">
+                    <label for="password">Парола</label>
+                    <input type="password" class="form-control" id="password" @keyup.enter="login()" v-model="password"
+                           placeholder="Въведи парола">
+                </div>
+                <button class="btn btn-primary">Влез</button>
             </div>
-            <div class="form-field">
-                <label for="password">Password </label><br>
-                <input @keyup.enter="login()" id="password" type="password" v-model="password">
-            </div>
-            <br>
-            <button @click="login()">Login</button>
         </div>
     </div>
 </template>

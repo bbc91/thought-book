@@ -1,21 +1,26 @@
 <template>
     <div class="register">
-        <div class="register-form">
-            <h1>Register</h1>
-            <div class="form-field">
-                <label for="name">Name </label><br>
-                <input id="name" type="text" v-model="name">
+        <div class="card login-panel" style="width: 20rem;">
+            <div class="card-body">
+                <h5 class="card-title">Регистрация</h5>
+                <div class="form-group">
+                    <label for="name">Име</label>
+                    <input type="text" class="form-control" id="name" @keyup.enter="registerUser()" v-model="name"
+                           placeholder="Въведи име">
+                </div>
+                <div class="form-group">
+                    <label for="email">И-мейл</label>
+                    <input type="email" class="form-control" id="email" @keyup.enter="registerUser()" v-model="email"
+                           placeholder="Въведи и-мейл">
+                </div>
+                <div class="form-group">
+                    <label for="password">Парола</label>
+                    <input type="password" class="form-control" id="password" @keyup.enter="registerUser()"
+                           v-model="password"
+                           placeholder="Въведи парола">
+                </div>
+                <button class="btn btn-primary">Регистрирай се</button>
             </div>
-            <div class="form-field">
-                <label for="email">Email </label><br>
-                <input id="email" type="email" v-model="email">
-            </div>
-            <div class="form-field">
-                <label for="password">Password </label><br>
-                <input id="password" type="password" v-model="password">
-            </div>
-            <br>
-            <button @click="registerUser()">Register</button>
         </div>
     </div>
 </template>
