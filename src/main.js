@@ -17,8 +17,32 @@ var config = {
 };
 firebase.initializeApp(config);
 
-new Vue({
-    router,
-    store,
-    render: h => h(App)
-}).$mount('#app');
+// store.dispatch('fetchUser');
+
+firebase.auth().onAuthStateChanged(function (user) {
+    // console.log(user);
+    if (user) {
+        store.commit('setUser', user);
+    } else {
+        // No user is signed in.
+    }
+});
+
+// function getUser() {
+//
+// }
+
+//here we get all the initial data needed.
+async function init() {
+
+    await store.dispatch('fetchUser');
+
+    //when all needed data is collected, start the app
+    new Vue({
+        router,
+        store,
+        render: h => h(App)
+    }).$mount('#app');
+}
+
+init();

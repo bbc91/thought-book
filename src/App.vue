@@ -1,49 +1,39 @@
 <template>
     <div id="app">
         <div id="menu">
-            <h1 v-if="user">Hey, {{user.email}}</h1>
             <ul>
                 <li>
                     <router-link tag="button" to="/">Home</router-link>
-                    <router-link tag="button" to="/register">Register</router-link>
+                    <router-link v-if="!user" tag="button" to="/register">Register</router-link>
                     <button @click="logOut()" v-if="user">Logout</button>
                 </li>
             </ul>
         </div>
+        <h2 v-if="user">Hey, {{user.email}}</h2>
         <router-view/>
     </div>
 </template>
 
 <script>
-    import firebase from 'firebase';
-
     export default {
         data() {
-            return {
-                user: null
+            return {}
+        },
+        computed: {
+            user() {
+                return this.$store.getters.loggedUser;
             }
         },
         methods: {
             logOut() {
                 let self = this;
-                firebase.auth().signOut().then(function (done) {
-                    // Sign-out successful.
-                    console.log(done);
-                    self.user = null;
-                }).catch(function (error) {
-                    // An error happened.
+                this.$store.dispatch('logOut').then(result => {
+                    console.log('logout success');
                 });
             }
         },
         created() {
             let self = this;
-            firebase.auth().onAuthStateChanged(function (user) {
-                if (user) {
-                    self.user = user;
-                } else {
-                    // No user is signed in.
-                }
-            });
         }
     }
 </script>
