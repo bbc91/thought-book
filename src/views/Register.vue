@@ -19,7 +19,7 @@
                            v-model="password"
                            placeholder="Въведи парола">
                 </div>
-                <button class="btn btn-primary">Регистрирай се</button>
+                <button @click="registerUser()" class="btn btn-primary">Регистрирай се</button>
             </div>
         </div>
     </div>

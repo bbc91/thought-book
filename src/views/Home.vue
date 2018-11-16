@@ -14,7 +14,7 @@
                     <input type="password" class="form-control" id="password" @keyup.enter="login()" v-model="password"
                            placeholder="Въведи парола">
                 </div>
-                <button class="btn btn-primary">Влез</button>
+                <button @click="login()" class="btn btn-primary">Влез</button>
             </div>
         </div>
     </div>
