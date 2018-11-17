@@ -19,6 +19,7 @@
                            placeholder="Въведи парола">
                 </div>
                 <button @click="login()" class="btn btn-info">Влез</button>
+                <router-link to="/register" style="margin-top: 5px;" class="float-right">Регистрирай се</router-link>
             </div>
         </div>
     </div>
