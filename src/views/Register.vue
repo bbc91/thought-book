@@ -42,7 +42,11 @@
         methods: {
             registerUser() {
                 let self = this;
-                this.$store.dispatch('register', {email: this.email, password: this.password}).then(result => {
+                this.$store.dispatch('register', {
+                    email: this.email,
+                    password: this.password,
+                    name: this.name
+                }).then(result => {
                     console.log('register success');
                     self.$router.push({path: '/'})
                 });

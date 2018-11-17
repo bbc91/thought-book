@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <h2 v-if="user">Hey, {{user.email}}</h2>
+        <h2 v-if="user">Здравей, {{user.displayName}}</h2>
         <div v-if="!user" class="card login-panel" style="width: 20rem;">
             <div class="card-body">
                 <h5 class="card-title">Вход</h5>

@@ -22,7 +22,14 @@ const actions = {
     register({commit, state, rootState}, data) {
         return firebase.auth().createUserWithEmailAndPassword(data.email, data.password).then(function (result) {
             console.log(result);
-            commit('setUser', result.user);
+            return result.user.updateProfile({
+                displayName: data.name
+            }).then(function (res) {
+                // Profile updated successfully!
+                commit('setUser', res.user);
+            }, function (error) {
+                // An error happened.
+            });
         }).catch(function (error) {
             // Handle Errors here.
             var errorCode = error.code;
