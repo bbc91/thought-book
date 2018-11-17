@@ -16,13 +16,24 @@ const router = new Router({
         },
         {
             path: '/register',
-            name: 'about',
+            name: 'register',
             // route level code-splitting
             // this generates a separate chunk (about.[hash].js) for this route
             // which is lazy-loaded when the route is visited.
             component: () => import(/* webpackChunkName: "register" */ './views/Register.vue'),
             meta: {
                 requiresGuest: true
+            }
+        },
+        {
+            path: '/diary',
+            name: 'diary',
+            // route level code-splitting
+            // this generates a separate chunk (about.[hash].js) for this route
+            // which is lazy-loaded when the route is visited.
+            component: () => import(/* webpackChunkName: "register" */ './views/Diary.vue'),
+            meta: {
+                requiresAuth: true
             }
         }
     ]
@@ -34,6 +45,14 @@ router.beforeEach((to, from, next) => {
         // this route requires Guest, check if logged in
         // if yes, redirect to homepage.
         if (user) {
+            next({
+                path: '/'
+            })
+        } else {
+            next()
+        }
+    } else if (to.matched.some(record => record.meta.requiresAuth)) {
+        if (!user) {
             next({
                 path: '/'
             })

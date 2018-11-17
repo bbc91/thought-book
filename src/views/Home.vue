@@ -1,6 +1,7 @@
 <template>
     <div class="home">
         <h2 v-if="user">Здравей, {{user.displayName}}</h2>
+
         <div v-if="!user" class="card login-panel" style="width: 20rem;">
             <div class="card-body">
                 <h5 class="card-title">Вход</h5>
@@ -14,7 +15,7 @@
                     <input type="password" class="form-control" id="password" @keyup.enter="login()" v-model="password"
                            placeholder="Въведи парола">
                 </div>
-                <button @click="login()" class="btn btn-primary">Влез</button>
+                <button @click="login()" class="btn btn-info">Влез</button>
             </div>
         </div>
     </div>
