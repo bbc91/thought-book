@@ -1,6 +1,9 @@
 <template>
     <div class="home">
-        <h2 v-if="user">Здравей, {{user.displayName}}</h2>
+        <b-jumbotron v-if="user" bg-variant="light" text-variant="dark" border-variant="info" :header="'Здравей, ' + user.displayName" lead="Добре дошъл в твоят дневник за Дисфункционални мисли и Когнитивно реструкториране.">
+            <p class="lead">С редовно записване на мислите си, и реструкторирането им, ще постигнеш много!</p>
+            <router-link class="btn btn-lg btn-info" to="/diary/create-thought">Добави мисъл</router-link>
+        </b-jumbotron>
 
         <div v-if="!user" class="card login-panel" style="width: 20rem;">
             <div class="card-body">

@@ -1,7 +1,6 @@
 <template>
     <div class="register">
-        <h4>Списък с мисли</h4>
-        <router-link class="btn btn-info" to="/diary/create-thought">Добави мисъл</router-link>
+        Create thought
     </div>
 </template>
 

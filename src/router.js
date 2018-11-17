@@ -31,7 +31,18 @@ const router = new Router({
             // route level code-splitting
             // this generates a separate chunk (about.[hash].js) for this route
             // which is lazy-loaded when the route is visited.
-            component: () => import(/* webpackChunkName: "register" */ './views/Diary.vue'),
+            component: () => import(/* webpackChunkName: "diary" */ './views/Diary.vue'),
+            meta: {
+                requiresAuth: true
+            }
+        },
+        {
+            path: '/diary/create-thought',
+            name: 'create-thought',
+            // route level code-splitting
+            // this generates a separate chunk (about.[hash].js) for this route
+            // which is lazy-loaded when the route is visited.
+            component: () => import(/* webpackChunkName: "diary" */ './views/Create-thought'),
             meta: {
                 requiresAuth: true
             }
