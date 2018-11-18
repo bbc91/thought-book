@@ -47,3 +47,7 @@ body {
 .wizard__next:hover, wizard__back:hover {
     background: #1792a8 !important;
 }
+
+.page-heading {
+    text-align: center;
+}

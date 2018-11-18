@@ -7,7 +7,7 @@
                  @dismiss-count-down="countDownChanged">
             Успешно добавихте мисъл в дневника си!
         </b-alert>
-        <h4>Списък с мисли</h4>
+        <h4 class="page-heading">Списък с мисли</h4>
         <router-link class="btn btn-info" to="/diary/create-thought">Добави мисъл</router-link>
 
         <div v-for="(thought, index) in thoughtsList" :key="index">{{thought.test}}</div>

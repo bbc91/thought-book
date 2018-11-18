@@ -1,30 +1,40 @@
 <template>
     <div class="register">
-        <h4>Добавяне на мисъл</h4>
-            <vue-good-wizard
-                    finalStepLabel="Изпрати"
-                    nextStepLabel="Напред"
-                    previousStepLabel="Назад"
-                    :steps="steps"
-                    :onNext="nextClicked"
-                    :onBack="backClicked">
-                <div slot="page1">
-                    <h4>Step 1</h4>
-                    <p>This is step 1</p>
+        <h4 class="page-heading">Добавяне на мисъл</h4>
+        <vue-good-wizard
+                finalStepLabel="Изпрати"
+                nextStepLabel="Напред"
+                previousStepLabel="Назад"
+                :steps="steps"
+                :onNext="nextClicked"
+                :onBack="backClicked">
+            <div slot="page1">
+                <h4 style="text-align: center;">Ситуация</h4>
+                <br>
+                <p><strong>С кого бях? Къде бях? Кога беше това? Какво правех?</strong></p>
+                <p>Но най-важното в ситуацията е да идентифицираме <strong>Активиращият стимул</strong> – онзи конкретен
+                    момент, в който се отключва цялото ни негативно преживяване – и по-конкретно емоционалната
+                    компонента на това преживяване. </p>
+                <p><strong style="color: red;"><i>Например:</i></strong><i> Бях на сбирка на анонимните алкохолици на
+                    седмичната ни среща. Когато се прибрах у дома, се оказа, че имаме гости – дъщеря ми с 5 годишната ми
+                    внучка и те ведно с жена ми бяха в изключително радостно настроение.</i></p>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" v-model="thought.situation"></textarea>
                 </div>
-                <div slot="page2">
-                    <h4>Step 2</h4>
-                    <p>This is step 2</p>
-                </div>
-                <div slot="page3">
-                    <h4>Step 3</h4>
-                    <p>This is step 3</p>
-                </div>
-                <div slot="page4">
-                    <h4>Step 4</h4>
-                    <p>This is step 4</p>
-                </div>
-            </vue-good-wizard>
+            </div>
+            <div slot="page2">
+                <h4>Step 2</h4>
+                <p>This is step 2</p>
+            </div>
+            <div slot="page3">
+                <h4>Step 3</h4>
+                <p>This is step 3</p>
+            </div>
+            <div slot="page4">
+                <h4>Step 4</h4>
+                <p>This is step 4</p>
+            </div>
+        </vue-good-wizard>
     </div>
 </template>
 
@@ -40,6 +50,9 @@
         },
         data() {
             return {
+                thought: {
+                    situation: ''
+                },
                 steps: [
                     {
                         label: '',
