@@ -58,4 +58,9 @@ body {
 
 .emotion {
     text-align: center;
+    margin-bottom: 15px;
+}
+
+.hot {
+    color: red;
 }
