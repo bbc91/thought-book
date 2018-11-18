@@ -6,6 +6,7 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './assets/css/style.css'
+
 Vue.use(BootstrapVue);
 
 Vue.config.productionTip = false;
@@ -20,7 +21,8 @@ var config = {
     storageBucket: "thought-book-3d51f.appspot.com",
     messagingSenderId: "660272407132"
 };
-firebase.initializeApp(config);
+const firebaseApp = firebase.initializeApp(config);
+Vue.prototype.$firebaseApp = firebaseApp;
 
 // store.dispatch('fetchUser');
 
