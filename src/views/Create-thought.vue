@@ -23,8 +23,141 @@
                 </div>
             </div>
             <div slot="page2">
-                <h4>Step 2</h4>
-                <p>This is step 2</p>
+                <h4 style="text-align: center;">Чувства / Настроения </h4>
+                <br>
+                <p style="text-align: center">Дайте проценти на чувствата които изпивате в ситуацията.</p>
+                <div class="row">
+                    <div class="col-md-3 emotion">
+                        <circle-slider
+                                progressColor="#17a2b8 "
+                                knobColor="#17a2b8"
+                                circleColor="#ccc"
+                                v-model="thought.emotions.fear"
+                                :side="150"
+                                :min="0"
+                                :max="100"
+                                :step-size="5"
+                                :circle-width-rel="20"
+                                :progress-width-rel="10"
+                                :knob-radius="10"
+                        ></circle-slider>
+                        Страх {{thought.emotions.fear}}%
+                    </div>
+                    <div class="col-md-3 emotion">
+                        <circle-slider
+                                progressColor="#17a2b8 "
+                                knobColor="#17a2b8"
+                                circleColor="#ccc"
+                                v-model="thought.emotions.worry"
+                                :side="150"
+                                :min="0"
+                                :max="100"
+                                :step-size="5"
+                                :circle-width-rel="20"
+                                :progress-width-rel="10"
+                                :knob-radius="10"
+                        ></circle-slider>
+                        Притеснение {{thought.emotions.worry}}%
+                    </div>
+                    <div class="col-md-3 emotion">
+                        <circle-slider
+                                progressColor="#17a2b8 "
+                                knobColor="#17a2b8"
+                                circleColor="#ccc"
+                                v-model="thought.emotions.humiliation"
+                                :side="150"
+                                :min="0"
+                                :max="100"
+                                :step-size="5"
+                                :circle-width-rel="20"
+                                :progress-width-rel="10"
+                                :knob-radius="10"
+                        ></circle-slider>
+                        Унижение {{thought.emotions.humiliation}}%
+                    </div>
+                    <div class="col-md-3 emotion">
+                        <circle-slider
+                                progressColor="#17a2b8 "
+                                knobColor="#17a2b8"
+                                circleColor="#ccc"
+                                v-model="thought.emotions.panic"
+                                :side="150"
+                                :min="0"
+                                :max="100"
+                                :step-size="5"
+                                :circle-width-rel="20"
+                                :progress-width-rel="10"
+                                :knob-radius="10"
+                        ></circle-slider>
+                        Паника {{thought.emotions.panic}}%
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 15px; margin-bottom: 15px;">
+                    <div class="col-md-3 emotion">
+                        <circle-slider
+                                progressColor="#17a2b8 "
+                                knobColor="#17a2b8"
+                                circleColor="#ccc"
+                                v-model="thought.emotions.pain"
+                                :side="150"
+                                :min="0"
+                                :max="100"
+                                :step-size="5"
+                                :circle-width-rel="20"
+                                :progress-width-rel="10"
+                                :knob-radius="10"
+                        ></circle-slider>
+                        Болка {{thought.emotions.pain}}%
+                    </div>
+                    <div class="col-md-3 emotion">
+                        <circle-slider
+                                progressColor="#17a2b8 "
+                                knobColor="#17a2b8"
+                                circleColor="#ccc"
+                                v-model="thought.emotions.anger"
+                                :side="150"
+                                :min="0"
+                                :max="100"
+                                :step-size="5"
+                                :circle-width-rel="20"
+                                :progress-width-rel="10"
+                                :knob-radius="10"
+                        ></circle-slider>
+                        Гняв {{thought.emotions.anger}}%
+                    </div>
+                    <div class="col-md-3 emotion">
+                        <circle-slider
+                                progressColor="#17a2b8 "
+                                knobColor="#17a2b8"
+                                circleColor="#ccc"
+                                v-model="thought.emotions.apathy"
+                                :side="150"
+                                :min="0"
+                                :max="100"
+                                :step-size="5"
+                                :circle-width-rel="20"
+                                :progress-width-rel="10"
+                                :knob-radius="10"
+                        ></circle-slider>
+                        Апатия {{thought.emotions.apathy}}%
+                    </div>
+                    <div class="col-md-3 emotion">
+                        <circle-slider
+                                progressColor="#17a2b8 "
+                                knobColor="#17a2b8"
+                                circleColor="#ccc"
+                                v-model="thought.emotions.sadness"
+                                :side="150"
+                                :min="0"
+                                :max="100"
+                                :step-size="5"
+                                :circle-width-rel="20"
+                                :progress-width-rel="10"
+                                :knob-radius="10"
+                        ></circle-slider>
+                        Тъга {{thought.emotions.sadness}}%
+                    </div>
+                </div>
             </div>
             <div slot="page3">
                 <h4>Step 3</h4>
@@ -51,7 +184,8 @@
         data() {
             return {
                 thought: {
-                    situation: ''
+                    situation: '',
+                    emotions: {}
                 },
                 steps: [
                     {

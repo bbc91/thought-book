@@ -8,6 +8,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './assets/css/style.css'
 
 Vue.use(BootstrapVue);
+import VueCircleSlider from 'vue-circle-slider'
+Vue.use(VueCircleSlider);
 
 Vue.config.productionTip = false;
 var firebase = require('firebase');

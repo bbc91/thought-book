@@ -10,6 +10,7 @@
     "bootstrap-vue": "^2.0.0-rc.11",
     "firebase": "^5.5.8",
     "vue": "^2.5.17",
+    "vue-circle-slider": "^1.0.2",
     "vue-good-wizard": "^1.4.1",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"

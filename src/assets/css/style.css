@@ -51,3 +51,11 @@ body {
 .page-heading {
     text-align: center;
 }
+
+.wizard__body__actions {
+    background-color: #17a2b8 !important;
+}
+
+.emotion {
+    text-align: center;
+}
