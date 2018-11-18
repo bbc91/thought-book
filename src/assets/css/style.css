@@ -34,3 +34,16 @@ body {
 .navbar {
     margin-bottom: 15px;
 }
+
+.wizard__body {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.wizard__next, .wizard__back {
+    background: #17a2b8 !important;
+}
+
+.wizard__next:hover, wizard__back:hover {
+    background: #1792a8 !important;
+}
