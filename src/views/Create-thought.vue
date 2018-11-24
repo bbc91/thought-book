@@ -89,6 +89,110 @@
                         {{automaticThought.emotion.percent}}%</p>
                 </div>
             </div>
+            <div slot="page5">
+                <h4 style="text-align: center;">Помощни въпроси</h4>
+                <br>
+                <div class="form-group">
+                    <label>Какво ме накара да се (страхувам, гневя, срамувам, обвинявам, уплаша, раздразня, натъжа…) в
+                        тази
+                        ситуация?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question1"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>И какво (плашещо, дразнещо, срамно, натъжаващо…) има в това?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question2"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какво ми мина през ума непосредствено преди да се почувствам по този начин?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какво си казах, което ми даде енергията да се почувствам по този начин?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какво си казах по повод случилото се? Случилото се ме накара да си помисля какво за себе
+                        си?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какво ми говори това за мен, ако е истина? Ако допусна, че това е истина, какво ми говори
+                        това на мен? А какво им говори на другите за мен?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question6"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какво се страхувам, че би могло да се случи, ако това, което си мисля е истина?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question7"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>И тогава, какво би могло да се случи? (последваш един и същ въпрос)</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question8"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какво значение има това за мен, моя живот, за моето бъдеще?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question9"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какво е най-лошото нещо, което би могло да се случи, ако това е истина?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question10"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какво по-лошо от това бих могъл/а да си помисля за себе си в тази ситуация?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question11"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какво е значението на това, какво другите хора чувстват и мислят за мен?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question12"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какво другите биха си помислили за човек, който мисли по начина, по който аз мисля?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question13"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Като цяло, какво значение има това за другия / другите хора?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question14"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какви образи или спомени ми изникнаха в тази ситуация?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question15"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какво си помислих малко преди да направя това, което направих в тази ситуация?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question16"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какво си помислих малко преди да не направя това, което ми се искаше да направя в тази
+                        ситуация?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question17"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какво си помислих веднага след като не реагирах своевременно в тази ситуация?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question18"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Какво си помислих, малко преди тялото ми да реагира така?</label>
+                    <textarea placeholder="Добави автоматична мисъл" class="form-control"
+                              rows="3" v-model="thought.helpQuestions.question19"></textarea>
+                </div>
+            </div>
         </vue-good-wizard>
     </div>
 </template>
@@ -141,7 +245,28 @@
                             percent: 0
                         }
                     ],
-                    automaticThoughts: []
+                    automaticThoughts: [],
+                    helpQuestions: {
+                        question1: '',
+                        question2: '',
+                        question3: '',
+                        question4: '',
+                        question5: '',
+                        question6: '',
+                        question7: '',
+                        question8: '',
+                        question9: '',
+                        question10: '',
+                        question11: '',
+                        question12: '',
+                        question13: '',
+                        question14: '',
+                        question15: '',
+                        question16: '',
+                        question17: '',
+                        question18: '',
+                        question19: '',
+                    }
                 },
                 automaticThoughText: '',
                 automaticThoughtEmotion: null,
@@ -164,7 +289,11 @@
                         options: {
                             // nextDisabled: true, // control whether next is disabled or not
                         },
-                    }
+                    },
+                    {
+                        label: '',
+                        slot: 'page5',
+                    },
                 ],
             }
         },
